@@ -1,0 +1,16 @@
+GlowScript 2.9 VPython
+k = 9e9
+L = 0.05
+a = L/2
+R = 0.04
+Q = 50e-6
+calc = 0
+dy = -a
+while dy < a :
+    rate(1000)
+    dy = dy + 0.001
+    constants = (k * Q) / 2 * a
+    hyp = sqrt(pow(R, 2) + pow((a - dy), 2))
+    calc = calc + constants * ((R * dy) / pow(hyp, 3))
+
+print(" N/C")
